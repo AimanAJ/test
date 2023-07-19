@@ -4,10 +4,1563 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlBUSALAH | Home</title>
+    <link rel="shortcut icon" href="/style_files/frontend/img/Logo.png" type="image/x-icon">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  
+    <!-- Ui modal CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('style_files/frontend/css/uiModal.min.css') }}">
+
+    <!-- Ui init tel CSS -->
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <!-- Fonts Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+
+    {{-- Sweet Alert --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous"></script>
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('/style_files/frontend/css/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/style_files/frontend/css/slick-theme.css') }}">
+
+
+    <!-- Bootstrap CSS 4 -->
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('front_end_style/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('front_end_style/css/bootstrap-rtl.min.css') }}">
+    <!-- Bootstrap CSS 4 -->
+
+    <!-- Bootstrap CSS 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- story.css-->
+    <link href="https://cdn.ampproject.org/amp-story-player-v0.css" rel="stylesheet">
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{{ asset('/style_files/frontend/css/lightSlider.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/style_files/frontend/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('/front_end_style/css/fonts.css') }}">
+
+    <!-- gsap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <!-- gsap -->
+
+
+
+
+
+    <!-- zuck css -->
+    <link rel="stylesheet" href="{{ asset('/style_files/frontend/css/auzk_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/style_files/frontend/css/zuck.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('/style_files/frontend/css/skins/snapgram.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/style_files/frontend/css/skins/vemdezap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/style_files/frontend/css/skins/facesnap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/style_files/frontend/css/skins/snapssenger.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('/style_files/frontend/css/style.css') }}">
+
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('style_files/frontend/css/responsive_TabletSize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('style_files/frontend/css/responsive_MobileSize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('style_files/frontend/css/responsive_new.css') }}">
+
+
+    {{-- ========================================================== --}}
+    {{-- =============== Live Select Search Section =============== --}}
+    {{-- ========================================================== --}}
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    {{-- ========================================================== --}}
+    {{-- =============== Live Select Search Section =============== --}}
+    {{-- ========================================================== --}}
 </head>
 <body>
-    aaa
+    
+    <div class="topHeader">
+        <div class="container">
+            <div class="info">
+                <div class="text">
+                    <p>
+                        استكشف جميع المتاجر العالمية المتاحة حالياً مباشرة.
+                        <a href="{{ route('stores') }}">اقرأ أكثر ...</a>
+                    </p>
+                </div>
+                <div class="topSetting">
+                    <ul class="settingMenu">
+                        {{-- <li> --}}
+                            {{-- @if (Auth::guard('customer')->check())
+                                <span> --}}
+                                    {{-- <a href="{{ route('myDashboard') }}">
+    
+                                        لوحه التحكم
+    
+                                    </a> --}}
+                                    {{-- |
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="mdi mdi-logout"></i> Logout
+                                    </a>
+                                </span> --}}
+                                {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form> --}}
+                            {{-- @else
+                                @if (Request::route()->getName() != 'customertLogin')
+                                    <span><a href="{{ route('customertLogin') }}">
+                                            <i class="fa-solid fa-user"></i>
+                                            تسجيل الدخول
+                                        </a></span>
+                                @endif --}}
+    
+    {{-- 
+                            @endif
+    
+    
+                        </li> --}}
+                        @if(Auth::guard('customer')->check())
+                            <li class="userInfom">
+    
+                                <p><i class="fa-solid fa-user"></i>
+                                    {!! isset(Auth::guard('customer')->user()->name) ? Auth::guard('customer')->user()->name : null !!}
+                                </p>
+                                <ul>
+                                    <li><a href="{{ route('myDashboard') }}">لوحة التحكم</a></li>
+                                    <li><a href="{{ route('myStoresWishlist') }}">متاجري المفضلة</a></li>
+                                    <li><a href="{{ route('myProductsWishlist') }}">منتجاتي المفضلة</a></li>
+                                    <li><a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">تسجيل الخروج</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+                                </ul>
+    
+                            </li>
+    
+                            <li class="userInfom">
+    
+                                <p><i class="fa-solid fa-bell"></i>
+                                    {!! isset($public_notifications) ? $public_notifications->count() : 0 !!}
+                                </p>
+                                <ul>
+                                    @if (isset($public_notifications) && $public_notifications->count()>0)
+                                        @foreach ( $public_notifications as $notification)
+                                        <li>{{ isset($notification->notificationGuide->title_guide_ar) ? $notification->notificationGuide->title_guide_ar : null  }}</li>
+                                        
+                                        @endforeach
+                                        <li><a href="{{ route('clientNotification') }}"> جميع الاشعارات</a></li>
+                                    @else
+                                    <li>لا يوجد لديك اشعارات</li>
+                                    
+                                    @endif
+    
+                             
+                                </ul>
+    
+                            </li>
+                        @else
+                            @if (Request::route()->getName() != 'customertLogin')
+                            <li>
+                                    <span><a href="{{ route('customertLogin') }}">
+                                            <i class="fa-solid fa-user"></i>
+                                            تسجيل الدخول
+                                        </a></span>
+                                    </li>
+                                @endif
+                        @endif
+                        
+                        <li>
+                            <span href="#">
+                                العربية
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <ul class="subMenu">
+                                    <li>
+                                        <a href="#">English</a>
+                                    </li>
+                                </ul>
+                            </span>
+                        </li>
+    
+                        {{-- <li>
+                            <span href="#">
+                                IQD
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <ul class="subMenu">
+                                    <li>
+                                        <a href="#">USD</a>
+                                    </li>
+                                </ul>
+                            </span>
+                        </li> --}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="myHeader">
+        <div class="container">
+            <div class="top">
+                <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                        <a href="{{ route('welcome') }}">
+                            <img src="{{ asset('style_files/frontend/img/Logo.png') }}" class="img-fluid" alt="img">
+                        </a>
+                    </div>
+    
+                    <div class="col-md-5 col-sm-4 col-xs-3">
+                        <form action="{{ route('search') }}" class="searchForm" method="GET">
+                            @csrf
+                            <div class="groupInput">
+                                <input type="search" value="{{ Request::get('search') }}" name="search" autocomplete="off"
+                                    class="form-control" placeholder="ابحث هنا عن المتجر.." id='search' />
+    
+                                <input type="submit" class="searchBtn" value="search" />
+                                <ul id="inList" style="display: none">
+    
+                                    @foreach ($historySearches as $history)
+                                        <li>
+                                            <span>{{ isset($history->store_name) ? $history->store_name : '------' }}</span>
+                                            <a href="{{ route('deleteSearch', $history->id) }}"> <i
+                                                    class="fa-solid fa-xmark"></i></a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <strong class="text-danger" style="margin:10px">
+                                @error('search')
+                                    {{ $message }}
+                                @enderror
+                            </strong>
+                        </form>
+                    </div>
+    
+                    <div class="col-md-5 px-md-0 mr-auto col-sm-4 col-xs-3 topMenuDiv">
+                        <div class="topMenu">
+                            <div class="selectDiv">
+                                <select name="store_city" id="store_city"
+                                    onchange="window.location.href=this.options[this.selectedIndex].value;"
+                                    style="
+                                padding: 5px;
+                                height: 41px;
+                                position: relative;
+                                top: -14px;
+                                border-color: #90c94c;
+                               
+                            ">
+    
+                                    <option value=""> اختر المحافظة .. </option>
+                                    {{-- {{ dd($public_cities) }} --}}
+                                    @if (isset($public_cities))
+                                        @foreach ($public_cities as $city)
+                                            <option value="{{ route('cityStores', $city->id) }}"
+                                                @if (old('store_city') == $city->id || (isset($city_id) && $city_id == $city->id)) selected @endif>
+    
+                                                {{ isset($city->name_ar) ? $city->name_ar : '------' }}
+                                            </option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
+                            <ul>
+    
+                                <li>
+                                    <a id="header_img" href="{{ route('freeDeliveryStores') }}">
+                                        <img src="{{ asset('style_files/frontend/img/topIcon/1.png') }}" class="img-fluid"
+                                            alt="img"> </a>
+                                    <span>توصيل
+                                        مجاني</span>
+                                </li>
+                                <li>
+                                    <a id="header_img" href="{{ route('newStore') }}">
+                                        <img src="{{ asset('style_files/frontend/img/topIcon/2.png') }}" class="img-fluid"
+                                            alt="img"> </a>
+                                    <span>المتاجر
+                                        الجديدة</span>
+                                </li>
+                                <li>
+                                    <a id="header_img" href="{{ route('summerOffers') }}">
+                                        <img src="{{ asset('style_files/frontend/img/topIcon/3.png') }}" class="img-fluid"
+                                            alt="img"> </a>
+                                    <span>العروض الخاصة
+                                    </span>
+                                </li>
+                                @if (Auth::guard('customer')->check())
+                                    <li>
+                                        <a id="header_img" href="{{ route('customerInvoices') }}">
+                                            <img src="{{ asset('style_files/frontend/img/topIcon/4.png') }}"
+                                                class="img-fluid" alt="img"> </a>
+                                        <span>طلباتك
+                                            السابقة</span>
+    
+                                    </li>
+                                @endif
+    
+                                {{-- <li>
+                                    <a href="#">
+                                        <img src="{{ asset('style_files/frontend/img/topIcon/5.png') }}" class="img-fluid"
+                                            alt="img"> </a>
+                                    <span>ساهم في
+                                        الخير</span>
+                                </li> --}}
+                                <li>
+                                    <a id="header_img" href="{{ route('mostSelling') }}">
+                                        <img src="{{ asset('style_files/frontend/img/topIcon/6.png') }}" class="img-fluid"
+                                            alt="img"> </a>
+                                    <span> الاكثر مبيعا</span>
+                                </li>
+    
+                                <li style="height: 85px">
+                                    <a id="header_img" href="{{ route('cart') }}">
+                                        <img src="{{ asset('style_files/frontend/img/shopingCart.png') }}"
+                                            class="img-fluid" alt="img"> </a>
+    
+                                    @if (Auth::guard('customer')->check())
+                                        @if (isset($public_customer_carts))
+                                            <span
+                                                class="cartNumber">{{ $public_customer_carts->count() > 0 ? $public_customer_carts->count() : 0 }}
+                                            </span>
+                                        @else
+                                            <span class="cartNumber">0</span>
+                                        @endif
+                                    @else
+                                        @if (isset($public_customer_carts['quantity']))
+                                            <span
+                                                class="cartNumber">{{ isset($public_customer_carts['quantity']) ? $public_customer_carts['quantity'] : 0 }}
+                                            </span>
+                                        @else
+                                            <span class="cartNumber">0</span>
+                                        @endif
+                                    @endif
+    
+                                </li>
+    
+    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg navbar-light customNav">
+                        <!-- Container wrapper -->
+                        <div class="container-fluid">
+                            <!-- Toggle button -->
+                            <button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse"
+                                data-mdb-target="#navbarExample1" aria-controls="navbarExample1" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <i class="fas fa-bars"></i>
+                            </button>
+    
+                            <!-- Collapsible wrapper -->
+                            <div class="collapse navbar-collapse allMenus" id="navbarExample1">
+                                <!-- all Department links -->
+                                <ul class="navbar-nav ml-auto ps-lg-0" style="padding-left: 0.15rem">
+                                    <!-- Navbar dropdown -->
+                                    <li class="nav-item dropdown position-static">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                            role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-bars mediabig"></i>
+                                            <i class="fa-sharp fa-solid fa-circle-chevron-down mediasmall"></i>
+                                            جميع الاقسام
+                                        </a>
+                                        <!-- Dropdown menu -->
+                                        <div class="dropdown-menu allDepartment mt-0" aria-labelledby="navbarDropdown">
+                                            <input type="text" id="menuSearch" class="form-control"
+                                                onkeyup="myFunction()" placeholder="ادخل كلمات البحث"
+                                                title="Type in a category">
+                                            <ul class="allDepartmentMenu" id="allDepartmentMenu">
+                                                {{-- Categories --}}
+                                                @if (isset($public_categories))
+                                                    @foreach ($public_categories as $public_categories)
+                                                        <li class="link">
+                                                            {{-- {{dd($public_categories->subCategories)}} --}}
+                                                            <a href="{{ route('categoryStores', $public_categories->id) }}"
+                                                                data-bs-target="{{ $public_categories->id }}">
+    
+    
+                                                                {{ $public_categories->name_ar }}
+    
+    
+                                                            </a>
+                                                            <div class="infoSide">
+                                                                <div class="container">
+                                                                    <div class="infoSideTitle">
+                                                                        <h2> {{ $public_categories->name_ar }}</h2>
+                                                                    </div>
+                                                                    {{-- {{dd($public_categories->subCategories)}} --}}
+                                                                    @if (isset($public_categories->subCategories))
+                                                                        @foreach ($public_categories->subCategories as $subCategory)
+                                                                            <ul class="infoSideMenu">
+                                                                                <li>
+    
+                                                                                    <a href="{{ route('subCategoryStores', $subCategory->id) }}"
+                                                                                        id="{{ $public_categories->id }}">
+    
+                                                                                        {{ $subCategory->name_ar }}
+    
+                                                                                    </a>
+                                                                                    <div class="infoSideInfo">
+                                                                                        @if (isset($subCategory->image) && $subCategory->image && file_exists($subCategory->image))
+                                                                                            <img src="{{ asset($subCategory->image) }}"
+                                                                                                class="img-fluid"
+                                                                                                alt="img">
+                                                                                        @else
+                                                                                            <img src="{{ asset('style_files/frontend/img/infoImage/men.png') }}"
+                                                                                                class="img-fluid"
+                                                                                                alt="img">
+                                                                                        @endif
+    
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        @endforeach
+                                                                    @endif
+    
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    @endforeach
+                                                    <li>
+                                                        {{-- {{dd($public_categories->subCategories)}} --}}
+                                                        <a class="linkAll" href="{{ route('mainCategories') }}">
+    
+                                                            جميع الأقسام
+    
+                                                        </a>
+                                                    </li>
+    
+    
+                                                    <!-- start else -->
+                                                @else
+                                                    <li class="link">
+                                                        <a href="#"> الملابس والأحذية والحقائب
+                                                        </a>
+                                                        <div class="infoSide">
+                                                            <div class="container">
+                                                                <div class="infoSideTitle">
+                                                                    <h2>الملابس والأحذية والحقائب</h2>
+                                                                </div>
+                                                                <ul class="infoSideMenu">
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            رجالية
+                                                                        </a>
+                                                                        <div class="infoSideInfo">
+                                                                            <img src="{{ asset('style_files/frontend/img/infoImage/men.png') }}"
+                                                                                class="img-fluid" alt="img">
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            نسائية
+                                                                        </a>
+                                                                        <div class="infoSideInfo">
+                                                                            <img src="{{ asset('style_files/frontend/img/infoImage/2_003.jpg') }}"
+                                                                                class="img-fluid" alt="img">
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            مختلط ( رجالي – نسائي)
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            لوازم الخياطة (بكافة انواعها)
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            احجام خاصة
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            ملابس أطفال (ولادي ، بناتي)
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            ملابس مواليد ومستلزماتهم (ولادي ، بناتي)
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            التصفية (البالة)
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> الألكترونيات وخدمات الأنترنت والصيانة
+                                                        </a>
+                                                        <div class="infoSide">
+                                                            <div class="container">
+                                                                <div class="infoSideTitle">
+                                                                    <h2>الألكترونيات وخدمات الأنترنت والصيانة</h2>
+                                                                </div>
+                                                                <ul class="infoSideMenu">
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            إالكترونيات
+                                                                        </a>
+                                                                        <div class="infoSideInfo">
+                                                                            <img src="{{ asset('style_files/frontend/img/infoImage/men.png') }}"
+                                                                                class="img-fluid" alt="img">
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            انترنيت
+                                                                        </a>
+                                                                        <div class="infoSideInfo">
+                                                                            <img src="{{ asset('style_files/frontend/img/infoImage/men.png') }}"
+                                                                                class="img-fluid" alt="img">
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> العطور
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> الساعات
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> الهدايا وتحفيات
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> السيارات
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> شركات التوصيل والشحن
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> شركات السفر والسياحة
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> مكاتب عقارية
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> الأقسام الطبية والصحية
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> الحليب ومشتقاته
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> المطاعم
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> محلات الكيك والمعجنات بأنواعها
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> معامل الماء والمشروبات الغازية
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> المحطات ( بانزين- نفط- كاز)
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#"> الأسواق المواد الغذائية ( جملة — مفرد )
+                                                        </a>
+                                                    </li>
+                                                    <li class="link">
+                                                        <a href="#">الأثاث ومستلزمات النجارة
+                                                        </a>
+                                                    </li>
+                                                    <!-- end else -->
+    
+                                                @endif
+    
+                                    </li>
+                                </ul>
+    
+    
+                            </div>
+    
+                        </div>
+                        <!-- main menu -->
+                        <div class="main_menu_res">
+                            <p><i class="fa-solid fa-bars"></i></p>
+                            <h5>القائمة الرئيسية</h5>
+                        </div>
+                        <ul class="mainMenu">
+                            <li>
+                                <a href="{{ route('welcome') }}" class="active">الصفحة الرئيسية</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('about') }}"> من نحن</a>
+                            </li>
+                            <li>
+    
+                                <a href="{{ route('howToRegister') }}"> كيفية التسجيل</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('stores') }}"> المتاجر </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('contact') }}"> اتصل بنا </a>
+                            </li>
+    
+                            <!-- Example single danger button -->
+                            <div>
+                                <li data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="font-size: var(--mdSize);
+                                color: var(--black);cursor: pointer;">
+                                    <a> خدمة العملاء</a>
+                                </li>
+    
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('faqs') }}">الاسئلة الشائعة</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('howToBuys') }}">طريقة الشراء </a></li>
+    
+                                </ul>
+                            </div>
+                        </ul>
+    
+                        {{-- <div class="userInfom mr-2">
+                            <p><i class="fa-solid fa-user"></i>
+                                Lorem, ipsum.</p>
+                        </div> --}}
+                        <!-- main menu -->
+    
+                        <!-- left Menus-->
+                        <div class="leftMenus">
+                            <!-- social menu -->
+                            <ul class="socialMenu">
+                                <li>
+                                    <a href="{{ $contact->youtube_url ? $contact->youtube_url : '#' }}"> <i
+                                            class="fa-brands fa-youtube"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{{ $contact->instagram_url ? $contact->instagram_url : '#' }}"> <i
+                                            class="fa-brands fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{{ $contact->twitter_url ? $contact->twitter_url : '#' }}"> <i
+                                            class="fa-brands fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{{ $contact->facebook_url ? $contact->facebook_url : '#' }}"> <i
+                                            class="fa-brands fa-facebook-f"></i> </a>
+                                </li>
+                            </ul>
+    
+                        </div>
+                        <!-- left Menus-->
+                    </nav>
+                    <!--  all Department links -->
+                </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+    
+        </div>
+    
+    
+        </div>
+        </div>
+    
+        </div>
+    
+    
+    
+        <div class="container">
+            <div id="stories" class="storiesWrapper"></div>
+        </div>
+    
+    
+    
+    </header>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+    <script type="text/javascript">
+        // AJAX => SEARCH
+        var route = "{{ route('autocompleteSearch') }}";
+        $('#search').typeahead({
+            source: function(query, process) {
+                return $.get(route, {
+                    query: query
+                }, function(data) {
+                    return process(data);
+                });
+            },
+        });
+    
+    
+    
+        $("#search").focus(function() {
+            $("#inList").css("display", "block");
+            $("#search").val() = $("#inList li").val();
+        });
+    
+    
+        $(document).mouseup(function(e) {
+            var container = $(".searchForm ");
+            var list = $("#inList ");
+    
+            // If the target of the click isn't the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                list.hide();
+            }
+        });
+    </script>
+    
+    <style>
+        #inList {
+            background: #fff
+        }
+    
+        #inList li {
+            border: 1px solid gray
+        }
+    
+        #inList li:hover {
+            background-color: #90c94c;
+        }
+    </style>
+    
+    
+    <script>
+        $("#inList li span").click(function() {
+            $("#search").val($.trim($(this).text()));
+        });
+    </script>
+    
+    
+    <script>
+        /********** story ************/
+        class SlideStories {
+            constructor(id) {
+                this.slide = document.querySelector(`[data-slide="${id}"]`);
+                this.active = 0;
+                this.init();
+            }
+    
+            activeSlide(index) {
+                this.active = index;
+                this.items.forEach((item) => item.classList.remove("active"));
+                this.items[index].classList.add("active");
+                this.thumbItems.forEach((item) => item.classList.remove("active"));
+                this.thumbItems[index].classList.add("active");
+    
+                this.autoSlide();
+    
+            }
+    
+            prev() {
+                if (this.active > 0) {
+                    this.activeSlide(this.active - 1);
+                } else {
+                    this.activeSlide(this.items.length - 1);
+                }
+            }
+    
+            next() {
+                if (this.active < this.items.length - 1) {
+                    this.activeSlide(this.active + 1);
+                } else {
+                    this.activeSlide(0);
+                }
+            }
+    
+            addNavigation() {
+                const nextBtn = this.slide.querySelector(".slide-next");
+                const prevBtn = this.slide.querySelector(".slide-prev");
+                nextBtn.addEventListener("click", this.next);
+                prevBtn.addEventListener("click", this.prev);
+            }
+    
+            addThumbItems() {
+                this.items.forEach(() => (this.thumb.innerHTML += `<span></span>`));
+                this.thumbItems = Array.from(this.thumb.children);
+            }
+    
+            autoSlide() {
+    
+                clearTimeout(this.timeout);
+                this.timeout = setTimeout(this.next, 5000);
+    
+    
+    
+            }
+    
+            init() {
+                this.next = this.next.bind(this);
+                this.prev = this.prev.bind(this);
+                this.items = this.slide.querySelectorAll(".slide-items > *");
+                this.thumb = this.slide.querySelector(".slide-thumb");
+                this.addThumbItems();
+                this.activeSlide(0);
+                this.addNavigation();
+            }
+        }
+    
+        new SlideStories("slide");
+    
+        /********** story ************/
+    </script>
+    
+
+    <section class="innerImage aboutUs">
+        <img src="{{ asset('style_files/frontend/img/inner.png') }}" alt="">
+        <div class="pageTitle">
+            <h2> صفحة المنتجات </h2>
+            <span> <i class="fa-sharp fa-solid fa-cart-shopping mainColor"></i>
+                الرئيسية
+                <span class="mainColor"> | </span>
+                <span class="mainColor"> صفحة المنتجات </span>
+            </span>
+        </div>
+    </section>
+
+    {{-- =========================================================== --}}
+    {{-- =========================== product Page =========================== --}}
+    {{-- =========================================================== --}}
+    <main class="tajerProducts productPage tajerPages">
+
+        <!-- Store Logo -->
+
+        <div class="borderStoreLogo">
+            @if (isset($store->profile_photo_url) &&
+                    $store->getRawOriginal('profile_photo_url') &&
+                    file_exists($store->getRawOriginal('profile_photo_url')))
+                <img src="{{ asset($store->getRawOriginal('profile_photo_url')) }}"
+                 width="70" height="70"
+                  {{-- style="border-radius: 10px; border:solid 1px black;" --}}
+                    >
+            @else
+                <img src="{{ asset('style_files/frontend/img/adidas.png') }}" class="img-fluid" alt="img">
+            @endif
+
+
+
+        </div>
+        <section class="tajerProductTabs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12  signupTabs p-0">
+                        <div class="tab">
+                            <button id="{{ $suggestPrice == 1 ? ' ' : 'defaultOpen' }}"
+                                class="tablinks {{ $suggestPrice == 1 ? '' : 'active' }}"
+                                onclick="openCity(event, 'categories')">
+                                <i class="fa-solid fa-bars"></i>
+                                جميع
+                                المنتجات</button>
+                            <button class="tablinks" onclick="openCity(event, 'rate')">
+                                <i class="fa-solid fa-star"></i>
+                                التقييم </button>
+                            <button class="tablinks" onclick="openCity(event, 'comment')">
+                                <i class="fa-solid fa-comment"></i>
+                                التعليقات</button>
+
+                            <button id="{{ $suggestPrice == 1 ? 'defaultOpen' : '' }}"
+                                class="tablinks {{ $suggestPrice == 1 ? 'active' : '' }}"
+                                onclick="openCity(event, 'message')">
+                                <i class="fa-solid fa-envelope"></i>
+                                راسل التاجر</button>
+                            {{-- <span>
+                                <i class="fa-solid fa-circle-dot mainColor"></i>
+                                مفتوح
+                            </span> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Related -->
+        <section class="productsContainer relatedProduct tabcontent" id="categories">
+            <div class="container">
+                <div class="row">
+                    <form action="{{ route('showProducts', [$id]) }}" method="GET" class="productsForm">
+                        <div class="top">
+                            <button type="button" class="filterProducts  bg-dark text-white" id="filterProducts">
+                                <!-- Filter Icon -->
+                                <i class="fa-solid fa-arrow-down-short-wide ml-1"></i>
+                                فلتر
+                            </button>
+
+
+
+                            <!-- search Input -->
+                            <div class="search">
+                                <input type="text" value="{{ Request::get('searchProduct') }}"
+                                name="searchProduct" class="form-control" placeholder="ابحث هنا عن منتجك ..">
+                                <ul id="inList" style="display: none">
+
+                                    @foreach ($storeHistoryProductsSearch as $history)
+                                        <li>
+                                            <span>{{ isset($history->product_name) ? $history->product_name : '------' }}</span>
+                                            <a href="{{ route('deleteProductHistory', $history->id) }}"> <i
+                                                    class="fa-solid fa-xmark"></i></a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+
+
+                            <!-- submit Form -->
+                            <button type="submit" class="submitFilter">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+
+                        <!-- filter Body -->
+                        <div class="filterBody">
+                            <div class="col-12">
+                                <div class="row">
+                                    {{-- Filter by Categories --}}
+                                    <div class="col-md-3">
+                                        <div class="group">
+                                            <h2>فرز حسب التصنيف</h2>
+                                            @foreach ($public_categories as $category)
+                                                @if (is_array($category_ids) && in_array($category->id, $category_ids))
+                                                    <div class="form-check">
+                                                        <label class="form-check-label"
+                                                            for="check{!! isset($category->id) ? $category->id : '' !!}">
+                                                            {!! isset($category->name_en) ? $category->name_en : '' !!}
+                                                        </label>
+                                                        <input class="form-check-input" name="category_ids[]"
+                                                            type="checkbox" value="{{ $category->id }}"
+                                                            id="check{!! isset($category->id) ? $category->id : '' !!}"
+                                                            @if (Request::get('category_ids') != null && in_array($category->id, Request::get('category_ids'))) checked @endif>
+
+                                                    </div>
+                                                @endif
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    {{-- Filter by Price --}}
+
+                                    <div class="col-md-3">
+                                        <div class="group">
+                                            <h2>تصنيف حسب السعر </h2>
+                                            <div class="rangeslider">
+                                                <input class="min" name="min" type="range" min="1"
+                                                    max="100" value="1" />
+                                                <input class="max" name="max" type="range" min="1"
+                                                    max="100" value="100" />
+                                                <span class="range_max light left ">100.000 $</span>
+                                                <span class="range_min light right  ">1.000 $</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- Filter by Sorting --}}
+
+                                    <div class="col-md-3">
+                                        <div class="group radioGroup">
+                                            <h2>فرز حسب </h2>
+                                            <div class="form-check">
+                                                <label class="form-check-label" for="radio1">
+                                                    الترتيب حسب متوسط ​​التقييم
+                                                </label>
+                                                <input class="form-check-input" type="radio" name="radio"
+                                                    id="radio1" value="option1" checked>
+
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label" for="radio2">
+                                                    ترتيب حسب الأحدث
+                                                </label>
+                                                <input class="form-check-input" type="radio" name="radio"
+                                                    id="radio2" value="option2">
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label" for="radio3">
+                                                    الترتيب حسب السعر: من الأقل إلى الأعلى
+                                                </label>
+                                                <input class="form-check-input" type="radio" name="radio"
+                                                    id="radio3" value="option3">
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label" for="radio4">
+                                                    الترتيب حسب السعر: من الأعلى إلى الأقل
+                                                </label>
+                                                <input class="form-check-input" type="radio" name="radio"
+                                                    id="radio4" value="option4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- Filter by other options --}}
+
+                                    <div class="col-md-3">
+                                        <div class="group ">
+                                            <h2>فرز حسب </h2>
+                                            <div class="form-check">
+                                                <label class="form-check-label" for="check1-1">
+                                                    الأكثر مبيعا
+                                                </label>
+                                                <input class="form-check-input" type="checkbox" name="check1"
+                                                    value="check1" id="check1-1">
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label" for="check2-2">
+                                                    العروض
+                                                </label>
+                                                <input class="form-check-input" type="checkbox" name="check2"
+                                                    value="check2" id="check2-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="sliderContainer">
+
+                            <!-- Start Slider -->
+                            <ul class="productSlider products">
+
+                                @if (isset($showProducts))
+                                    {{-- {{dd($showProducts->store_id)}} --}}
+                                    @foreach ($showProducts as $product)
+                                        <li class="relatedItem">
+                                            <div class="floatingLinks">
+                                                <!-- add to wishlist -->
+
+                                                @if (Auth::guard('customer')->check())
+                                                    {{-- @if ($product->store_id != Auth::guard('customer')->user()->id) --}}
+                                                    <a href="{{ route('wishlistAddRemove', $product->id) }}">
+                                                        <div @if (isset($product_wishlist_ids) && count($product_wishlist_ids) > 0) @if (in_array($product->id, $product_wishlist_ids)) style="color: red" @endif
+                                                            @endif >
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </div>
+                                                    </a>
+                                                    {{-- @endif --}}
+
+                                                @endif
+                                                <a href="{{ route('singleProductDetails', $product->id) }}">
+                                                    <div><i class="fa fa-cart-arrow-down"></i></div>
+                                                </a>
+                                                {{-- 000000000000 --}}
+
+                                                <a href="{{ route('singleProductDetails', $product->id) }}"
+                                                    class="see">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                    مشاهدة المنتج
+                                                </a>
+                                            </div>
+                                            <div class="image my_products">
+
+
+                                                @if (isset($product->image) && $product->getRawOriginal('image') && file_exists($product->getRawOriginal('image')))
+                                                    <img src="{{ asset($product->getRawOriginal('image')) }}"
+                                                        width="70" height="70"
+                                                        style="border-radius: 10px; border:solid 1px black;">
+                                                @else
+                                                    <img src="{{ asset('style_files/frontend/img/phoneBig.png') }}"
+                                                        class="img-fluid" alt="img">
+                                                @endif
+                                            </div>
+                                            <div class="productInfo">
+                                                <span class="productType ayproductType">{!! isset($product->categories[0]->name_en) ? $product->categories[0]->name_en : '' !!}</span>
+                                                <span class="productType ayproductType">{!! isset($product->name_en) ? $product->name_en : '' !!}</span>
+                                                <span class="productTitle"></span>
+                                                @if (isset($product->productReviews) && $product->productReviews->count() > 0)
+                                                    <div class="floteRate">
+                                                        <span>متوسط التقييم</span>
+                                                        <span class="rate">
+                                                            {{-- The whole number of votes is calculated without decimals --}}
+                                                            @for ($i = 0; $i < (int) singleProductReviewStarsNumber(singleRealProductReview($product->id)); $i++)
+                                                                <i class="fa-solid fa-star"></i>
+                                                            @endfor
+                                                            {{-- Check if there is a half-voice that is not counted in the stars above --}}
+                                                            @if (is_numeric(singleProductReviewStarsNumber(singleRealProductReview($product->id))) &&
+                                                                    floor(singleProductReviewStarsNumber(singleRealProductReview($product->id))) !=
+                                                                        singleProductReviewStarsNumber(singleRealProductReview($product->id)))
+                                                                <i class="fas fa-star-half"></i>
+                                                            @endif
+                                                        </span>
+                                                    </div>
+                                                @else
+                                                    <span> لا يوجد تقييمات </span>
+
+                                                @endif
+                                            </div>
+                                            <div class="productForm">
+
+                                                <!-- Submit Form button -->
+                                                <a href="{{ route('singleProductDetails', $product->id) }}"
+                                                    class="btn addToCartBtn">
+                                                    <i class="fa-solid fa-cart-plus"></i>
+                                                    اضف الى السلة
+                                                </a>
+
+                                                <!-- Price Label -->
+                                                @if ($product->on_sale_price_status == 'Active')
+                                                    <span class="price" style="text-decoration: line-through">
+                                                        {{ $product->sale_price }}</span>
+                                                    <br>
+                                                    <span class="price">{{ $product->on_sale_price }}</span>
+                                                @else
+                                                    <span class="price">
+                                                        {{ $product->sale_price }}</span>
+                                                @endif
+
+
+
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                @else
+                                    <strong style="color:red">{{ $danger }}</strong>
+                                @endif
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Store Rate -->
+        <section class="storeRate tabcontent" id="rate">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mt-4">
+                        <div class="rateContainer">
+                            <h2>التقييم للمتجر</h2>
+                            @if (Auth::guard('customer')->check())
+                                <div class="commentAndRate">
+                                    <div class="box rating">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" style="color: green !important"
+                                            class="border-0 text-primary bg-transparent my-3" data-bs-toggle="modal"
+                                            data-bs-target="#rating">
+                                            اضغط للتقييم
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="rating" tabindex="-1"
+                                            aria-labelledby="ratingLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header d-flex justify-content-between">
+                                                        <h5 class="modal-title" id="ratingLabel">تقييم</h5>
+                                                        <button type="button" class="btn-close d-block mr-auto ml-0"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    {{-- {{dd(Auth::guard('customer')->user()->user_type)}} --}}
+                                                    <form action="{{ route('storeReview') }}" method="GET">
+                                                        @csrf
+                                                        {{-- {{dd(in_array($id, $store_review_ids))}} --}}
+                                                        {{-- count($store_review_ids) > 0 --}}
+                                                        @if (isset($store_review_ids))
+                                                            @if (in_array($id, $store_review_ids))
+                                                                <div style="margin: 20px">
+                                                                    <span style="color: red">لا يمكنك تقييم هذا المتجر مرة أخرى</span>
+                                                                </div>
+                                                            @else
+                                                                {{-- {{dd($id)}} --}}
+                                                                @if ($id == Auth::guard('customer')->user()->id)
+                                                                    <div style="margin: 20px">
+                                                                        <span style="color: red">لا يمكنك تقييم متجرك</span>
+                                                                    </div>
+                                                                @else
+                                                                    {{-- {{dd(in_array($id, $store_review_ids))}} --}}
+                                                                    {{-- {{dd($showProducts->store_id)}} --}}
+                                                                    <input type="hidden" name="store_id"
+                                                                        value="{{ isset($id) ? $id : null }}">
+                                                                    <div class="modal-body">
+                                                                        <div
+                                                                            class="ratingInput d-flex justify-content-center mb-3">
+                                                                            <div class="rate">
+                                                                                <input type="radio" id="star5"
+                                                                                    name="rate" value="5" />
+                                                                                <label for="star5" title="text">5
+                                                                                    stars</label>
+                                                                                <input type="radio" id="star4"
+                                                                                    name="rate" value="4" />
+                                                                                <label for="star4" title="text">4
+                                                                                    stars</label>
+                                                                                <input type="radio" id="star3"
+                                                                                    name="rate" value="3" />
+                                                                                <label for="star3" title="text">3
+                                                                                    stars</label>
+                                                                                <input type="radio" id="star2"
+                                                                                    name="rate" value="2" />
+                                                                                <label for="star2" title="text">2
+                                                                                    stars</label>
+                                                                                <input type="radio" id="star1"
+                                                                                    name="rate" value="1" />
+                                                                                <label for="star1" title="text">1
+                                                                                    star</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <textarea name="review_note" id="" cols="30" rows="5" class="form-control mb-3"></textarea>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="submit" class="btn mainBtn">
+                                                                            ارسال
+                                                                        </button>
+                                                                    </div>
+                                                                @endif
+                                                            @endif
+                                                        @endif
+
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            @else
+                                <div style="margin: 20px">
+                                    <a href="{{ route('customertLogin') }}" style="color:red">للتقييم والتعليق يرجى
+                                        تسجيل الدخول</a>
+                                </div>
+                            @endif
+                            <div class="rateRange mb-5">
+                                @if (isset($store->storeReviews) && $store->storeReviews->count() > 0)
+                                    <span>متوسط التقييم</span>
+                                    <span class="rate">
+                                        {{-- The whole number of votes is calculated without decimals --}}
+                                        @for ($i = 0; $i < (int) singleStoreReviewStarsNumber(singleRealStoreReview($store->id)); $i++)
+                                            <i class="fa-solid fa-star"></i>
+                                        @endfor
+                                        {{-- Check if there is a half-voice that is not counted in the stars above --}}
+                                        @if (is_numeric(singleStoreReviewStarsNumber(singleRealStoreReview($store->id))) &&
+                                                floor(singleStoreReviewStarsNumber(singleRealStoreReview($store->id))) !=
+                                                    singleStoreReviewStarsNumber(singleRealStoreReview($store->id)))
+                                            <i class="fas fa-star-half"></i>
+                                        @endif
+                                    </span>
+
+                                @endif
+
+
+
+                                <span class="voitNumber">
+                                    @if (isset($store->storeReviews) && $store->storeReviews->count() > 0)
+                                        ({{ $store->storeReviews->count() }} صوتاً)
+
+                                    @endif
+                                </span>
+                            </div>
+                            {{-- <div class="rateProgress">
+                                <div class="theRate">
+                                    <label for="file">5 نجوم</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width:{{ number_format(storeReviewPercentageDetails($store->id, 5), 2) }}%"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>{{ number_format(storeReviewPercentageDetails($store->id, 5), 0) }}%</span>
+                                </div>
+                                <div class="theRate">
+                                    <label for="file">4 نجوم</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width:{{ number_format(storeReviewPercentageDetails($store->id, 4), 2) }}%"
+                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>{{ number_format(storeReviewPercentageDetails($store->id, 4), 0) }}% </span>
+                                </div>
+                                <div class="theRate">
+                                    <label for="file">3 نجوم</label>
+                                    <div class="progress">
+                                        <div class="progress-bar"
+                                            role="progressbar"style="width:{{ number_format(storeReviewPercentageDetails($store->id, 3), 2) }}%"
+                                            aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>{{ number_format(storeReviewPercentageDetails($store->id, 3), 0) }}% </span>
+                                </div>
+                                <div class="theRate">
+                                    <label for="file">نجمتين</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width:{{ number_format(storeReviewPercentageDetails($store->id, 2), 2) }}%"
+                                            aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>{{ number_format(storeReviewPercentageDetails($store->id, 2), 0) }}%</span>
+                                </div>
+                                <div class="theRate">
+                                    <label for="file">نجمة </label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width:{{ number_format(storeReviewPercentageDetails($store->id, 1), 2) }}%"
+                                            aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>{{ number_format(storeReviewPercentageDetails($store->id, 1), 0) }}%</span>
+                                </div>
+                            </div> --}}
+                        </div>
+                    </div>
+                    <div class="col-md-8 mt-4">
+                        <div class="commentContainer">
+                            {{-- <h2>التعليقات</h2> --}}
+                            <ul class="allComment">
+                                <!-- comments -->
+                                {{-- {{dd( $store->storeComments->customer->profile_photo_url)}} --}}
+                                @if (isset($store) && $store->count() > 0)
+                                    @foreach ($store->storeReviews as $review)
+                                        <!-- comment 1 -->
+                                        <li class="commentItem">
+                                            <div class="image">
+
+                                                @if (isset($review->customer->profile_photo_url) &&
+                                                        $review->customer->getRawOriginal('profile_photo_url') &&
+                                                        file_exists($review->customer->getRawOriginal('profile_photo_url')))
+                                                    <img src="{{ asset($review->customer->getRawOriginal('profile_photo_url')) }}"
+                                                        width="70" height="70"
+                                                        style="border-radius: 10px; border:solid 1px black;"
+                                                        class="storeLogo">
+                                                @else
+                                                    <img src="{{ asset('style_files/frontend/img/comment.png') }}"
+                                                        class="storeLogo" alt="img">
+                                                @endif
+
+                                                <span>{{ isset($review->customer->name) ? $review->customer->name : null }}
+                                                </span>
+
+                                            </div>
+                                            <div class="text">
+                                                <div class="top">
+                                                    <div class="date">
+                                                        <span>{{ isset($review->created_at) ? $review->created_at : null }}</span>
+                                                    </div>
+
+                                                </div>
+                                                <div class="body">
+                                                    <p>{{ isset($review->review_note) ? $review->review_note : null }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{-- Store Comment --}}
+        <section class="storeRate tabcontent" id="comment">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mt-4">
+                        <div class="rateContainer">
+                            <h2>التقييم للمتجر</h2>
+                            @if (Auth::guard('customer')->check())
+                                <div class="commentAndRate">
+
+                                    <div class="box commitng">
+
+                                        <!-- Button trigger modal -->
+                                        <button type="button" style="color: green !important"
+                                            class="border-0 text-primary bg-transparent my-3 mt-0"
+                                            data-bs-toggle="modal" data-bs-target="#commitng">
+                                            اضغط للتعليق
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="commitng" tabindex="-1"
+                                            aria-labelledby="commitngLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header d-flex justify-content-between">
+                                                        <h5 class="modal-title" id="commitngLabel">تعليق</h5>
+                                                        <button type="button" class="btn-close d-block mr-auto ml-0"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <form action="{{ route('storeComment') }}" method="GET">
+                                                        @csrf
+                                                        @if ($id == Auth::guard('customer')->user()->id)
+                                                            <div style="margin: 20px">
+                                                                <span style="color: red">لا يمكنك اضافة تعليق الى متجرك</span>
+                                                            </div>
+                                                        @else
+                                                            <div class="modal-body">
+                                                                <input type="hidden" name="store_id"
+                                                                    value="{{ isset($id) ? $id : null }}">
+                                                                <textarea name="comment" id="" cols="30" rows="5" class="form-control mb-3" required></textarea>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="submit" class="btn mainBtn">
+                                                                    ارسال
+                                                                </button>
+                                                            </div>
+                                                        @endif
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @else
+                                <div style="margin: 20px">
+                                    <a href="{{ route('customertLogin') }}" style="color:red">للتقييم والتعليق يرجى
+                                        تسجيل الدخول</a>
+                                </div>
+                            @endif
+
+                        </div>
+                    </div>
+                    <div class="col-md-8 mt-4">
+                        <div class="commentContainer">
+                            <h2>التعليقات</h2>
+                            <ul class="allComment">
+                                <!-- comments -->
+
+                                @if (isset($store) && $store->count() > 0)
+                                    @foreach ($store->storeComments as $comment)
+                                        <!-- comment 1 -->
+                                        <li class="commentItem">
+                                            <div class="image">
+
+                                                @if (isset($comment->customer->profile_photo_url) &&
+                                                        $comment->customer->getRawOriginal('profile_photo_url') &&
+                                                        file_exists($comment->customer->getRawOriginal('profile_photo_url')))
+                                                    <img src="{{ asset($comment->customer->getRawOriginal('profile_photo_url')) }}"
+                                                        width="70" height="70"
+                                                        style="border-radius: 10px; border:solid 1px black;"
+                                                        class="storeLogo">
+                                                @else
+                                                    <img src="{{ asset('style_files/frontend/img/comment.png') }}"
+                                                        class="storeLogo" alt="img">
+                                                @endif
+
+                                                <span>{{ isset($comment->customer->name) ? $comment->customer->name : null }}
+                                                </span>
+
+                                            </div>
+                                            <div class="text">
+                                                <div class="top">
+                                                    <div class="date">
+                                                        <span>{{ isset($comment->created_at) ? $comment->created_at : null }}</span>
+                                                    </div>
+
+                                                </div>
+                                                <div class="body">
+                                                    <p>{{ isset($comment->comment) ? $comment->comment : null }}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- send A message -->
+        {{-- {{dd(Auth::guard('customer')->user()->id)}} --}}
+        <section class="sendMessagg py-4 tabcontent mt-5" id="message">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <form action="{{ route('contactForm') }}" method="POST" class="messageForm"
+                            enctype="multipart/form-data">
+                            @csrf
+                            @if (Auth::guard('customer')->check())
+                                @if ($id == Auth::guard('customer')->user()->id)
+                                    <div style="margin: 20px">
+                                        <span style="color: red">لا يمكنك مراسلة متجرك</span>
+                                    </div>
+                                @else
+                                    <strong class="text-danger">
+                                        @error('message_error')
+                                            {{ $message }}
+                                        @enderror
+                                    </strong>
+                                    <input type="hidden" name="receiver_id" value="{{ isset($id) ? $id : null }}">
+                                    {{-- Message Details --}}
+                                    <textarea name="message_details" placeholder="اكتب رسالتك هنا .." class="form-control mb-3" id=""
+                                        cols="30" rows="10"></textarea>
+                                    {{-- Message File --}}
+                                    <div class="col-md-6 mb-3  pb-3 ">
+                                        <input type="file" multiple  name="message_file[]" class="form-control">
+                                        <strong class="text-danger">
+                                            * @error('message_file')
+                                                {{ $message }}
+                                            @enderror
+                                        </strong>
+                                    </div>
+
+                                    <input type="submit" class="mainBtn border-0" value="ارسل">
+                                @endif
+                            @else
+                                <div style="margin: 20px">
+                                    <span style="color: red">Sorry You Should Login First</span>
+                                </div>
+                            @endif
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="js.js"></script>
 </body>
 </html>
